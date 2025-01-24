@@ -1,8 +1,8 @@
 ﻿using Gay.TCazier.Resume.Contracts.Requests.V1.GetAll;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
-using Resume.SDK;
-using Resume.SDK.Interfaces.API.Endpoints.V1;
+using Gay.TCazier.Resume.SDK;
+using Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 
 
 var services = new ServiceCollection();
