@@ -17,13 +17,20 @@ public static class SDKServiceCollectionExtensions
         //})
         services.AddRefitClient<IAddressEndpoints>()
             .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        services.AddRefitClient<ICountryCodeEndpoints>()
+            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        services.AddRefitClient<IContactEndpoints>()
+            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        services.AddRefitClient<IOrganizationEndpoints>()
+            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        services.AddRefitClient<IPersonEndpoints>()
+            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        services.AddRefitClient<IPhoneNumberEndpoints>()
+            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
+        
         services.AddRefitClient<ICertificateEndpoints>()
             .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
         services.AddRefitClient<IEducationDegreeEndpoints>()
-            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
-        services.AddRefitClient<IEducationInstitutionEndpoints>()
-            .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
-        services.AddRefitClient<IPhoneNumberEndpoints>()
             .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
         services.AddRefitClient<IProjectEndpoints>()
             .ConfigureHttpClient(x => x.BaseAddress = new Uri(baseURL));
