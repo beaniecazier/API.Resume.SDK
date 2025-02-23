@@ -7,7 +7,7 @@
     <RootNamespace>Gay.TCazier.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>alpha-1.0.1</VersionSuffix>
+    <VersionSuffix>alpha-1.0.2</VersionSuffix>
     <PackageId>Gay.TCazier.pkg.$(AssemblyName)</PackageId>
     <Title>Resume API Buisness Logic Layer</Title>
     <PackageProjectUrl>tcazier.gay</PackageProjectUrl>
