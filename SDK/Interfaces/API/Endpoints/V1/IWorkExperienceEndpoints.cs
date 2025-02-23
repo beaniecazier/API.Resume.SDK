@@ -13,7 +13,7 @@ public interface IWorkExperienceEndpoints
     Task<HttpResponseMessage?> CreateWorkExperienceModel(CreateWorkExperienceModelRequest request);
 
     [Get($"/{WorkExperienceModelEndpoints.GetById}")]
-    Task<WorkExperienceModelResponse> GetWorkExperienceModelByIDAsync(int id);
+    Task<WorkExperienceModelResponse> GetWorkExperienceModelByIDAsync(string id);
 
     [Get($"/{WorkExperienceModelEndpoints.GetAll}")]
     Task<WorkExperienceModelsResponse> GetAllWorkExperienceModels(GetAllWorkExperienceModelsRequest request);
@@ -22,5 +22,5 @@ public interface IWorkExperienceEndpoints
     Task<HttpResponseMessage?> UpdateWorkExperienceModel(string id, UpdateWorkExperienceModelRequest request);
 
     [Delete($"/{WorkExperienceModelEndpoints.Delete}")]
-    Task<WorkExperienceModelResponse> DeleteWorkExperienceModel(int id);
+    Task<WorkExperienceModelResponse> DeleteWorkExperienceModel(string id);
 }

@@ -13,7 +13,7 @@ public interface ICertificateEndpoints
     Task<HttpResponseMessage?> CreateCertificateModel(CreateCertificateModelRequest request);
 
     [Get($"/{CertificateModelEndpoints.GetById}")]
-    Task<CertificateModelResponse> GetCertificateModelByIDAsync(int id);
+    Task<CertificateModelResponse> GetCertificateModelByIDAsync(string id);
 
     [Get($"/{CertificateModelEndpoints.GetAll}")]
     Task<CertificateModelsResponse> GetAllCertificateModels(GetAllCertificateModelsRequest request);
@@ -22,5 +22,5 @@ public interface ICertificateEndpoints
     Task<HttpResponseMessage?> UpdateCertificateModel(string id, UpdateCertificateModelRequest request);
 
     [Delete($"/{CertificateModelEndpoints.Delete}")]
-    Task<CertificateModelResponse> DeleteCertificateModel(int id);
+    Task<CertificateModelResponse> DeleteCertificateModel(string id);
 }

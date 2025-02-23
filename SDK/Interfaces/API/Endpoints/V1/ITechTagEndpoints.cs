@@ -13,7 +13,7 @@ public interface ITechTagEndpoints
     Task<HttpResponseMessage?> CreateTechTagModel(CreateTechTagModelRequest request);
 
     [Get($"/{TechTagModelEndpoints.GetById}")]
-    Task<TechTagModelResponse> GetTechTagModelByIDAsync(int id);
+    Task<TechTagModelResponse> GetTechTagModelByIDAsync(string id);
 
     [Get($"/{TechTagModelEndpoints.GetAll}")]
     Task<TechTagModelsResponse> GetAllTechTagModels(GetAllTechTagModelsRequest request);
@@ -22,5 +22,5 @@ public interface ITechTagEndpoints
     Task<HttpResponseMessage?> UpdateTechTagModel(string id, UpdateTechTagModelRequest request);
 
     [Delete($"/{TechTagModelEndpoints.Delete}")]
-    Task<TechTagModelResponse> DeleteTechTagModel(int id);
+    Task<TechTagModelResponse> DeleteTechTagModel(string id);
 }

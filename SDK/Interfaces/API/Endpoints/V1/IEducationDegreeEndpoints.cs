@@ -13,7 +13,7 @@ public interface IEducationDegreeEndpoints
     Task<HttpResponseMessage?> CreateEducationDegreeModel(CreateEducationDegreeModelRequest request);
 
     [Get($"/{EducationDegreeModelEndpoints.GetById}")]
-    Task<EducationDegreeModelResponse> GetEducationDegreeModelByIDAsync(int id);
+    Task<EducationDegreeModelResponse> GetEducationDegreeModelByIDAsync(string id);
 
     [Get($"/{EducationDegreeModelEndpoints.GetAll}")]
     Task<EducationDegreeModelsResponse> GetAllEducationDegreeModels(GetAllEducationDegreeModelsRequest request);
@@ -22,5 +22,5 @@ public interface IEducationDegreeEndpoints
     Task<HttpResponseMessage?> UpdateEducationDegreeModel(string id, UpdateEducationDegreeModelRequest request);
 
     [Delete($"/{EducationDegreeModelEndpoints.Delete}")]
-    Task<EducationDegreeModelResponse> DeleteEducationDegreeModel(int id);
+    Task<EducationDegreeModelResponse> DeleteEducationDegreeModel(string id);
 }

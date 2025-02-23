@@ -13,7 +13,7 @@ public interface IProjectEndpoints
     Task<HttpResponseMessage?> CreateProjectModel(CreateProjectModelRequest request);
 
     [Get($"/{ProjectModelEndpoints.GetById}")]
-    Task<ProjectModelResponse> GetProjectModelByIDAsync(int id);
+    Task<ProjectModelResponse> GetProjectModelByIDAsync(string id);
 
     [Get($"/{ProjectModelEndpoints.GetAll}")]
     Task<ProjectModelsResponse> GetAllProjectModels(GetAllProjectModelsRequest request);
@@ -22,5 +22,5 @@ public interface IProjectEndpoints
     Task<HttpResponseMessage?> UpdateProjectModel(string id, UpdateProjectModelRequest request);
 
     [Delete($"/{ProjectModelEndpoints.Delete}")]
-    Task<ProjectModelResponse> DeleteProjectModel(int id);
+    Task<ProjectModelResponse> DeleteProjectModel(string id);
 }

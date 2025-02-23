@@ -13,7 +13,7 @@ public interface IPersonEndpoints
     Task<HttpResponseMessage?> CreatePersonModel(CreatePersonModelRequest request);
 
     [Get($"/{PersonModelEndpoints.GetById}")]
-    Task<PersonModelResponse> GetPersonModelByIDAsync(int id);
+    Task<PersonModelResponse> GetPersonModelByIDAsync(string id);
 
     [Get($"/{PersonModelEndpoints.GetAll}")]
     Task<PersonModelsResponse> GetAllPersonModels(GetAllPersonModelsRequest request);
@@ -22,5 +22,5 @@ public interface IPersonEndpoints
     Task<HttpResponseMessage?> UpdatePersonModel(string id, UpdatePersonModelRequest request);
 
     [Delete($"/{PersonModelEndpoints.Delete}")]
-    Task<PersonModelResponse> DeletePersonModel(int id);
+    Task<PersonModelResponse> DeletePersonModel(string id);
 }

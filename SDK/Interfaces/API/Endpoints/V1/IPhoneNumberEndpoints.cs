@@ -13,7 +13,7 @@ public interface IPhoneNumberEndpoints
     Task<HttpResponseMessage?> CreatePhoneNumberModel(CreatePhoneNumberModelRequest request);
 
     [Get($"/{PhoneNumberModelEndpoints.GetById}")]
-    Task<PhoneNumberModelResponse> GetPhoneNumberModelByIDAsync(int id);
+    Task<PhoneNumberModelResponse> GetPhoneNumberModelByIDAsync(string id);
 
     [Get($"/{PhoneNumberModelEndpoints.GetAll}")]
     Task<PhoneNumberModelsResponse> GetAllPhoneNumberModels(GetAllPhoneNumberModelsRequest request);
@@ -22,5 +22,5 @@ public interface IPhoneNumberEndpoints
     Task<HttpResponseMessage?> UpdatePhoneNumberModel(string id, UpdatePhoneNumberModelRequest request);
 
     [Delete($"/{PhoneNumberModelEndpoints.Delete}")]
-    Task<PhoneNumberModelResponse> DeletePhoneNumberModel(int id);
+    Task<PhoneNumberModelResponse> DeletePhoneNumberModel(string id);
 }

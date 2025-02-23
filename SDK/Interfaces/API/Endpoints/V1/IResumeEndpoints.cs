@@ -13,7 +13,7 @@ public interface IResumeEndpoints
     Task<HttpResponseMessage?> CreateResumeModel(CreateResumeModelRequest request);
 
     [Get($"/{ResumeModelEndpoints.GetById}")]
-    Task<ResumeModelResponse> GetResumeModelByIDAsync(int id);
+    Task<ResumeModelResponse> GetResumeModelByIDAsync(string id);
 
     [Get($"/{ResumeModelEndpoints.GetAll}")]
     Task<ResumeModelsResponse> GetAllResumeModels(GetAllResumeModelsRequest request);
@@ -22,5 +22,5 @@ public interface IResumeEndpoints
     Task<HttpResponseMessage?> UpdateResumeModel(string id, UpdateResumeModelRequest request);
 
     [Delete($"/{ResumeModelEndpoints.Delete}")]
-    Task<ResumeModelResponse> DeleteResumeModel(int id);
+    Task<ResumeModelResponse> DeleteResumeModel(string id);
 }
