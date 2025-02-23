@@ -1,5 +1,4 @@
-# VERSION 1.0.0-alpha-1.0.0
---------------------------------------------------------------------------------
+﻿# VERSION 1.0.0-alpha-1.0.0
 Update ServiceCollection extension method to register all new endpoints
 Update endpoints to take string id
 Update post and put endpoints to return HTTPResponseMessage?

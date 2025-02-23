@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Gay.TCazier.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix>alpha-1.0.0</VersionSuffix>
+    <PackageId>Gay.TCazier.pkg.$(AssemblyName)</PackageId>
+    <Title>Resume API Buisness Logic Layer</Title>
+    <PackageProjectUrl>tcazier.gay</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+    <FileVersion>$(VersionPrefix).0</FileVersion>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>
+      VERSION 1.0.0-alpha-1.0.0
+      --------------------------------------------------------------------------------
+      Update ServiceCollection extension method to register all new endpoints
+      Update endpoints to take string id
+      Update post and put endpoints to return HTTPResponseMessage?
+      Add Endpoint collections for new Models
+      Rename EducationalInstitution to Organization to allow for model to be used in other models
+      Add consumer project to test
+      Add git action CICD pipeline to make and publish nuget package
+      Add package icon
+      Update project documentation
+    </PackageReleaseNotes>
+    <PackageIcon>1738852015508output.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Gay.TCazier.pkg.Resume.Contracts" Version="1.0.0-alpha-1.2.0" />
+    <PackageReference Include="Refit" Version="8.0.0" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="1738852015508output.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
