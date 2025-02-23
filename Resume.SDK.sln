@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume.SDK", "SDK\Resume.SDK.csproj", "{23145671-FDB5-400A-B4E0-52BD75EA56BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SDK", "SDK\SDK.csproj", "{23145671-FDB5-400A-B4E0-52BD75EA56BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume.SDK.Consumer", "Resume.SDK.Consumer\Resume.SDK.Consumer.csproj", "{6F05F4C4-D070-439D-AA52-02B7902857AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{6F05F4C4-D070-439D-AA52-02B7902857AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D3FCE9B-5551-40C4-BD97-4935B7621574}"
 	ProjectSection(SolutionItems) = preProject

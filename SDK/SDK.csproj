@@ -17,10 +17,11 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
-      VERSION 1.0.0-alpha-1.0.1
+      VERSION 1.0.0-alpha-1.0.2
       --------------------------------------------------------------------------------
-      Small bug fix
-      Fix missing license file
+      Fix up folder structure
+      Update icon
+      Update gitignore to ignore ide specific files
     </PackageReleaseNotes>
     <PackageIcon>1738852015508output.png</PackageIcon>
   </PropertyGroup>

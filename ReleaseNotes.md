@@ -1,4 +1,9 @@
-﻿# VERSION 1.0.0-alpha-1.0.1
+﻿# VERSION 1.0.0-alpha-1.0.2
+Fix up folder structure
+Update icon
+Update gitignore to ignore ide specific files
+
+# VERSION 1.0.0-alpha-1.0.1
 Small bug fix
 Fix missing license file
 
