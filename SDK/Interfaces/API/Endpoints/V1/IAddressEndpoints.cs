@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IAddressEndpoints
 {
     [Post($"/{AddressModelEndpoints.Post}")]
-    Task CreateAddressModel(CreateAddressModelRequest request);
+    Task<HttpResponseMessage?> CreateAddressModel(CreateAddressModelRequest request);
 
     [Get($"/{AddressModelEndpoints.GetById}")]
     Task<AddressModelResponse> GetAddressModelByIDAsync(string id);
@@ -19,7 +19,7 @@ public interface IAddressEndpoints
     Task<AddressModelsResponse> GetAllAddressModels(GetAllAddressModelsRequest request);
 
     [Put($"/{AddressModelEndpoints.Put}")]
-    Task<AddressModelResponse> UpdateAddressModel(string id, UpdateAddressModelRequest request);
+    Task<HttpResponseMessage?> UpdateAddressModel(string id, UpdateAddressModelRequest request);
 
     [Delete($"/{AddressModelEndpoints.Delete}")]
     Task<AddressModelResponse> DeleteAddressModel(string id);

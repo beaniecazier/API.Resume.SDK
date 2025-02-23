@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IPhoneNumberEndpoints
 {
     [Post($"/{PhoneNumberModelEndpoints.Post}")]
-    Task<PhoneNumberModelResponse> CreatePhoneNumberModel(CreatePhoneNumberModelRequest request);
+    Task<HttpResponseMessage?> CreatePhoneNumberModel(CreatePhoneNumberModelRequest request);
 
     [Get($"/{PhoneNumberModelEndpoints.GetById}")]
     Task<PhoneNumberModelResponse> GetPhoneNumberModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface IPhoneNumberEndpoints
     Task<PhoneNumberModelsResponse> GetAllPhoneNumberModels(GetAllPhoneNumberModelsRequest request);
 
     [Put($"/{PhoneNumberModelEndpoints.Put}")]
-    Task<PhoneNumberModelResponse> UpdatePhoneNumberModel(UpdatePhoneNumberModelRequest request);
+    Task<HttpResponseMessage?> UpdatePhoneNumberModel(string id, UpdatePhoneNumberModelRequest request);
 
     [Delete($"/{PhoneNumberModelEndpoints.Delete}")]
     Task<PhoneNumberModelResponse> DeletePhoneNumberModel(int id);

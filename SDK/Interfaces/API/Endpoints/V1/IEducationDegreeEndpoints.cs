@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IEducationDegreeEndpoints
 {
     [Post($"/{EducationDegreeModelEndpoints.Post}")]
-    Task<EducationDegreeModelResponse> CreateEducationDegreeModel(CreateEducationDegreeModelRequest request);
+    Task<HttpResponseMessage?> CreateEducationDegreeModel(CreateEducationDegreeModelRequest request);
 
     [Get($"/{EducationDegreeModelEndpoints.GetById}")]
     Task<EducationDegreeModelResponse> GetEducationDegreeModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface IEducationDegreeEndpoints
     Task<EducationDegreeModelsResponse> GetAllEducationDegreeModels(GetAllEducationDegreeModelsRequest request);
 
     [Put($"/{EducationDegreeModelEndpoints.Put}")]
-    Task<EducationDegreeModelResponse> UpdateEducationDegreeModel(UpdateEducationDegreeModelRequest request);
+    Task<HttpResponseMessage?> UpdateEducationDegreeModel(string id, UpdateEducationDegreeModelRequest request);
 
     [Delete($"/{EducationDegreeModelEndpoints.Delete}")]
     Task<EducationDegreeModelResponse> DeleteEducationDegreeModel(int id);

@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface ITechTagEndpoints
 {
     [Post($"/{TechTagModelEndpoints.Post}")]
-    Task<TechTagModelResponse> CreateTechTagModel(CreateTechTagModelRequest request);
+    Task<HttpResponseMessage?> CreateTechTagModel(CreateTechTagModelRequest request);
 
     [Get($"/{TechTagModelEndpoints.GetById}")]
     Task<TechTagModelResponse> GetTechTagModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface ITechTagEndpoints
     Task<TechTagModelsResponse> GetAllTechTagModels(GetAllTechTagModelsRequest request);
 
     [Put($"/{TechTagModelEndpoints.Put}")]
-    Task<TechTagModelResponse> UpdateTechTagModel(UpdateTechTagModelRequest request);
+    Task<HttpResponseMessage?> UpdateTechTagModel(string id, UpdateTechTagModelRequest request);
 
     [Delete($"/{TechTagModelEndpoints.Delete}")]
     Task<TechTagModelResponse> DeleteTechTagModel(int id);

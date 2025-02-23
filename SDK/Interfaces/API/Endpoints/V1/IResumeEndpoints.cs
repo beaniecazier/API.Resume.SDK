@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IResumeEndpoints
 {
     [Post($"/{ResumeModelEndpoints.Post}")]
-    Task<ResumeModelResponse> CreateResumeModel(CreateResumeModelRequest request);
+    Task<HttpResponseMessage?> CreateResumeModel(CreateResumeModelRequest request);
 
     [Get($"/{ResumeModelEndpoints.GetById}")]
     Task<ResumeModelResponse> GetResumeModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface IResumeEndpoints
     Task<ResumeModelsResponse> GetAllResumeModels(GetAllResumeModelsRequest request);
 
     [Put($"/{ResumeModelEndpoints.Put}")]
-    Task<ResumeModelResponse> UpdateResumeModel(UpdateResumeModelRequest request);
+    Task<HttpResponseMessage?> UpdateResumeModel(string id, UpdateResumeModelRequest request);
 
     [Delete($"/{ResumeModelEndpoints.Delete}")]
     Task<ResumeModelResponse> DeleteResumeModel(int id);

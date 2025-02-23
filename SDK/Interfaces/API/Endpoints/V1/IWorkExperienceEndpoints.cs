@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IWorkExperienceEndpoints
 {
     [Post($"/{WorkExperienceModelEndpoints.Post}")]
-    Task<WorkExperienceModelResponse> CreateWorkExperienceModel(CreateWorkExperienceModelRequest request);
+    Task<HttpResponseMessage?> CreateWorkExperienceModel(CreateWorkExperienceModelRequest request);
 
     [Get($"/{WorkExperienceModelEndpoints.GetById}")]
     Task<WorkExperienceModelResponse> GetWorkExperienceModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface IWorkExperienceEndpoints
     Task<WorkExperienceModelsResponse> GetAllWorkExperienceModels(GetAllWorkExperienceModelsRequest request);
 
     [Put($"/{WorkExperienceModelEndpoints.Put}")]
-    Task<WorkExperienceModelResponse> UpdateWorkExperienceModel(UpdateWorkExperienceModelRequest request);
+    Task<HttpResponseMessage?> UpdateWorkExperienceModel(string id, UpdateWorkExperienceModelRequest request);
 
     [Delete($"/{WorkExperienceModelEndpoints.Delete}")]
     Task<WorkExperienceModelResponse> DeleteWorkExperienceModel(int id);

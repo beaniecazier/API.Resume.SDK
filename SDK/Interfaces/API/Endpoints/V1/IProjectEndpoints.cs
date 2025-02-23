@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface IProjectEndpoints
 {
     [Post($"/{ProjectModelEndpoints.Post}")]
-    Task<ProjectModelResponse> CreateProjectModel(CreateProjectModelRequest request);
+    Task<HttpResponseMessage?> CreateProjectModel(CreateProjectModelRequest request);
 
     [Get($"/{ProjectModelEndpoints.GetById}")]
     Task<ProjectModelResponse> GetProjectModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface IProjectEndpoints
     Task<ProjectModelsResponse> GetAllProjectModels(GetAllProjectModelsRequest request);
 
     [Put($"/{ProjectModelEndpoints.Put}")]
-    Task<ProjectModelResponse> UpdateProjectModel(UpdateProjectModelRequest request);
+    Task<HttpResponseMessage?> UpdateProjectModel(string id, UpdateProjectModelRequest request);
 
     [Delete($"/{ProjectModelEndpoints.Delete}")]
     Task<ProjectModelResponse> DeleteProjectModel(int id);

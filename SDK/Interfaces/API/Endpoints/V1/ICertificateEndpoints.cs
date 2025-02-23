@@ -10,7 +10,7 @@ namespace Gay.TCazier.Resume.SDK.Interfaces.API.Endpoints.V1;
 public interface ICertificateEndpoints
 {
     [Post($"/{CertificateModelEndpoints.Post}")]
-    Task<CertificateModelResponse> CreateCertificateModel(CreateCertificateModelRequest request);
+    Task<HttpResponseMessage?> CreateCertificateModel(CreateCertificateModelRequest request);
 
     [Get($"/{CertificateModelEndpoints.GetById}")]
     Task<CertificateModelResponse> GetCertificateModelByIDAsync(int id);
@@ -19,7 +19,7 @@ public interface ICertificateEndpoints
     Task<CertificateModelsResponse> GetAllCertificateModels(GetAllCertificateModelsRequest request);
 
     [Put($"/{CertificateModelEndpoints.Put}")]
-    Task<CertificateModelResponse> UpdateCertificateModel(UpdateCertificateModelRequest request);
+    Task<HttpResponseMessage?> UpdateCertificateModel(string id, UpdateCertificateModelRequest request);
 
     [Delete($"/{CertificateModelEndpoints.Delete}")]
     Task<CertificateModelResponse> DeleteCertificateModel(int id);
