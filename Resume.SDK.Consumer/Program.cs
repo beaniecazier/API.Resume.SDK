@@ -42,10 +42,10 @@ var provider = services.BuildServiceProvider();
 var PhoneNumberApi = provider.GetRequiredService<IPhoneNumberEndpoints>();
 var newPhoneNumberRequest = new CreatePhoneNumberModelRequest()
 {
-    AreaCode = 503,
+    AreaCode = "503",
     CountryCode = 230,
-    LineNumber = 0608,
-    TelephonePrefix = 896,
+    LineNumber = "0608",
+    TelephonePrefix = "896",
     Name = "Beanies Cell 1",
     Notes = "SDK Consumer POST Test",
     PhoneType = ePhoneType.Mobile

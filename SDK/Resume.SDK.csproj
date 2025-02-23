@@ -7,27 +7,20 @@
     <RootNamespace>Gay.TCazier.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>alpha-1.0.0</VersionSuffix>
+    <VersionSuffix>alpha-1.0.1</VersionSuffix>
     <PackageId>Gay.TCazier.pkg.$(AssemblyName)</PackageId>
     <Title>Resume API Buisness Logic Layer</Title>
     <PackageProjectUrl>tcazier.gay</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
     <FileVersion>$(VersionPrefix).0</FileVersion>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
-      VERSION 1.0.0-alpha-1.0.0
+      VERSION 1.0.0-alpha-1.0.1
       --------------------------------------------------------------------------------
-      Update ServiceCollection extension method to register all new endpoints
-      Update endpoints to take string id
-      Update post and put endpoints to return HTTPResponseMessage?
-      Add Endpoint collections for new Models
-      Rename EducationalInstitution to Organization to allow for model to be used in other models
-      Add consumer project to test
-      Add git action CICD pipeline to make and publish nuget package
-      Add package icon
-      Update project documentation
+      Small bug fix
+      Fix missing license file
     </PackageReleaseNotes>
     <PackageIcon>1738852015508output.png</PackageIcon>
   </PropertyGroup>
@@ -39,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE.txt">
+    <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
