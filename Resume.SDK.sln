@@ -5,9 +5,17 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume.SDK", "SDK\Resume.SDK.csproj", "{23145671-FDB5-400A-B4E0-52BD75EA56BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resume.SDK.Consumer", "Resume.SDK.Consumer\Resume.SDK.Consumer.csproj", "{6F05F4C4-D070-439D-AA52-02B7902857AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume.SDK.Consumer", "Resume.SDK.Consumer\Resume.SDK.Consumer.csproj", "{6F05F4C4-D070-439D-AA52-02B7902857AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resume.Contracts", "..\Contracts\Resume.Contracts\Resume.Contracts.csproj", "{2FA5770E-0BE8-49EC-9DBC-DFDCE8DAB2EF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D3FCE9B-5551-40C4-BD97-4935B7621574}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		CHANGELOG = CHANGELOG
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+		ReleaseNotes.md = ReleaseNotes.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +31,6 @@ Global
 		{6F05F4C4-D070-439D-AA52-02B7902857AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F05F4C4-D070-439D-AA52-02B7902857AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F05F4C4-D070-439D-AA52-02B7902857AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FA5770E-0BE8-49EC-9DBC-DFDCE8DAB2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FA5770E-0BE8-49EC-9DBC-DFDCE8DAB2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FA5770E-0BE8-49EC-9DBC-DFDCE8DAB2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FA5770E-0BE8-49EC-9DBC-DFDCE8DAB2EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
