@@ -23,8 +23,12 @@
       Update icon
       Update gitignore to ignore ide specific files
     </PackageReleaseNotes>
-    <PackageIcon>1738852015508output.png</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Gay.TCazier.pkg.Resume.Contracts" Version="1.0.0-alpha-1.2.0" />
@@ -44,6 +48,10 @@
     <None Update="1738852015508output.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+    </None>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
