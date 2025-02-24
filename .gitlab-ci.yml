@@ -9,30 +9,34 @@ deploy:
   before_script:
     - apt-get update && apt-get install -y jq
     - GROUP_ID=$(curl --header "PRIVATE-TOKEN:$NUGET_AUTH_TOKEN" "$CI_API_V4_URL/projects/$CI_PROJECT_ID" | jq -r .namespace.id)
-    - echo "Setting up NuGet authentication..."
-    - mkdir -p ~/.nuget/NuGet
-    - echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-      <configuration>
-        <packageSources>
-          <add key=\"nuget.org\" value=\"https://api.nuget.org/v3/index.json\" />
-          <add key=\"GroupPackageBeanieUtilities\" value=\"${CI_API_V4_URL}/groups/$NUGET_GROUP_ID_BEANIESUTILITIES/-/packages/nuget/index.json\" />
-          <add key=\"GroupPackageResume\" value=\"${CI_API_V4_URL}/groups/$GROUP_ID/-/packages/nuget/index.json\" />
-        </packageSources>
-        <packageSourceCredentials>
-          <GroupPackageBeanieUtilities>
-            <add key=\"Username\" value=\"$GITLAB_USER_LOGIN\" />
-            <add key=\"ClearTextPassword\" value=\"$NUGET_AUTH_TOKEN\" />
-          </GroupPackageBeanieUtilities>
-          <GroupPackageResume>
-            <add key=\"Username\" value=\"$GITLAB_USER_LOGIN\" />
-            <add key=\"ClearTextPassword\" value=\"$NUGET_AUTH_TOKEN\" />
-          </GroupPackageResume>
-        </packageSourceCredentials>
-      </configuration>" > ~/.nuget/NuGet/NuGet.Config
+    # - echo "Setting up NuGet authentication..."
+    # - mkdir -p ~/.nuget/NuGet
+    # - echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+    #   <configuration>
+    #     <packageSources>
+    #       <add key=\"nuget.org\" value=\"https://api.nuget.org/v3/index.json\" />
+    #       <add key=\"GroupPackageBeanieUtilities\" value=\"${CI_API_V4_URL}/groups/$NUGET_GROUP_ID_BEANIESUTILITIES/-/packages/nuget/index.json\" />
+    #       <add key=\"GroupPackageResume\" value=\"${CI_API_V4_URL}/groups/$GROUP_ID/-/packages/nuget/index.json\" />
+    #     </packageSources>
+    #     <packageSourceCredentials>
+    #       <GroupPackageBeanieUtilities>
+    #         <add key=\"Username\" value=\"$GITLAB_USER_LOGIN\" />
+    #         <add key=\"ClearTextPassword\" value=\"$NUGET_AUTH_TOKEN\" />
+    #       </GroupPackageBeanieUtilities>
+    #       <GroupPackageResume>
+    #         <add key=\"Username\" value=\"$GITLAB_USER_LOGIN\" />
+    #         <add key=\"ClearTextPassword\" value=\"$NUGET_AUTH_TOKEN\" />
+    #       </GroupPackageResume>
+    #     </packageSourceCredentials>
+    #   </configuration>" > ~/.nuget/NuGet/NuGet.Config
   script:
+    - dotnet nuget add source "${CI_API_V4_URL}/groups/$GROUP_ID/-/packages/nuget/index.json\" --name GroupPackagesResume --username $GITLAB_USER_LOGIN --password $NUGET_AUTH_TOKEN --store-password-in-clear-text
+    - dotnet nuget add source "${CI_API_V4_URL}/groups/$NUGET_GROUP_ID_BEANIESUTILITIES/-/packages/nuget/index.json\" --name GroupPackagesBeanieUtilities --username $GITLAB_USER_LOGIN --password $NUGET_AUTH_TOKEN --store-password-in-clear-text
     - dotnet build -c Release
     - dotnet nuget add source "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/nuget/index.json" --name gitlab --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
     - dotnet nuget push "SDK/bin/Release/*.nupkg" --source gitlab
+    - dotnet nuget remove source GroupPackagesResume
+    - dotnet nuget remove source GroupPackagesBeanieUtilities
   rules:
    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment: production
