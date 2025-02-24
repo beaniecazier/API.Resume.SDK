@@ -29,8 +29,8 @@ deploy:
     #       </GroupPackageResume>
     #     </packageSourceCredentials>
     #   </configuration>" > ~/.nuget/NuGet/NuGet.Config
-    - dotnet nuget add source "${CI_API_V4_URL}/groups/$GROUP_ID/-/packages/nuget/index.json\" --name GroupPackagesResume --username $GITLAB_USER_LOGIN --password $NUGET_AUTH_TOKEN --store-password-in-clear-text
-    - dotnet nuget add source "${CI_API_V4_URL}/groups/$NUGET_GROUP_ID_BEANIESUTILITIES/-/packages/nuget/index.json\" --name GroupPackagesBeanieUtilities --username $GITLAB_USER_LOGIN --password $NUGET_AUTH_TOKEN --store-password-in-clear-text
+    - dotnet nuget add source "${CI_API_V4_URL}/groups/$GROUP_ID/-/packages/nuget/index.json\" --name GroupPackagesResume --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
+    - dotnet nuget add source "${CI_API_V4_URL}/groups/$NUGET_GROUP_ID_BEANIESUTILITIES/-/packages/nuget/index.json\" --name GroupPackagesBeanieUtilities --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
   script:
     - dotnet build -c Release
     - dotnet nuget add source "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/nuget/index.json" --name gitlab --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
