@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Gay.TCazier.pkg.Resume.Contracts" Version="1.0.0-alpha-1.2.0" />
+    <PackageReference Include="Gay.TCazier.pkg.Resume.Contracts" Version="1.0.0-alpha-1.2.1" />
     <PackageReference Include="Refit" Version="8.0.0" />
     <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
   </ItemGroup>
