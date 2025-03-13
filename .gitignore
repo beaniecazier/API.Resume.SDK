@@ -362,6 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-../../BeaniesUtilities/*
 /.obsidian
 /.idea
+/.idea/.idea.Resume.SDK/.idea/vcs.xml
