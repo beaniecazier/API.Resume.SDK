@@ -7,7 +7,7 @@
     <RootNamespace>Gay.TCazier.Resume.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>alpha-1.0.3</VersionSuffix>
+    <VersionSuffix>alpha-1.0.4</VersionSuffix>
     <PackageId>Gay.TCazier.pkg.Resume.$(AssemblyName)</PackageId>
     <Title>Resume API Buisness Logic Layer</Title>
     <PackageProjectUrl>tcazier.gay</PackageProjectUrl>
@@ -17,12 +17,12 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>
-      # VERSION 1.0.0-alpha-1.0.3
-      - Update gitignore
-      - Update dependencies
+      # VERSION 1.0.0-alpha-1.0.4
+      - Add logging to ServiceCollectionExtension method
     </PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
     <AssemblyName>Resume.$(MSBuildProjectName)</AssemblyName>
+    <Version>1.0.0-alpha-1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
