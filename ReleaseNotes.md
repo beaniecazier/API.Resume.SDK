@@ -1,4 +1,7 @@
-﻿# VERSION 1.0.0-alpha-1.0.3
+﻿# VERSION 1.0.0-alpha-1.0.4
+- Add logging to ServiceCollectionExtension method
+
+# VERSION 1.0.0-alpha-1.0.3
 - Update gitignore
 - Update dependencies
 
